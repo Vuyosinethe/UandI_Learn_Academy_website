@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U&I LEARN ACADEMY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+       h1 {
+        color: #030303; /* Bright color for visibility */
+        font-family: 'Roboto', sans-serif; /* Font from Google Fonts */
+        font-size: 50px; /* Larger size for the main heading */
+        font-weight: 700; /* Bold for emphasis */
+        text-align: left; /* Aligning to the left */
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        letter-spacing: 2px; /* Adds spacing between letters */
+        position: absolute; /* Absolute positioning */
+        top: 10px; /* Position from the top */
+        left: 20px; /* Position from the left */
+        margin: 0; /* Removing default margin */
+        margin-top: 0;
+        text-transform: uppercase; /* Makes it all caps for emphasis */
+        z-index: 10; /* Ensures it's above other content */
+        background: linear-gradient(to right, #FF5733, #FFC300);  
+        /*color: transparent;*/
+    }
+
+
+
+        h2 { color: #3498DB;
+            font-size: 30px;
+            margin-top: 120px;
+        
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            font-size: 24px;
+        }
+    
+        body {
+            background-image: url('https://www.betterup.com/hubfs/Marketing-manager-presenting-charts-on-screen-at-team-meeting-best-jobs-with-business-degree.jpg#keepProtocol');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50%) */
+                z-index: -1;
+        }
+        .top-right-nav {
+            display: flex;
+            justify-content: flex-end;  /* Aligns items to the right */
+            gap: 20px;  /* Adds spacing between links */
+            list-style: none;  /* Removes default bullet points */
+            padding: 15px 30px;  /* Adds padding for spacing */
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .top-right-nav li {
+            display: inline;
+        }
+
+        .top-right-nav a {
+            text-decoration: none;
+            color: navy; /* Adjust text color */
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .register-button {
+            background-color: #33bbff; /* Bright color for visibility */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+
+        .register-button:hover {
+            background-color: #0d13c2; /* Slightly darker on hover */
+        }
+        .teacher-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px;
+            white-space: nowrap;
+        }
+        .teacher-card {
+            flex: 0 0 auto;
+            width: 250px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+            scroll-snap-align: start;
+        }
+        .teacher-card:nth-child(1) { background: #FFDDC1; }
+        .teacher-card:nth-child(2) { background: #C1FFD7; }
+        .teacher-card:nth-child(3) { background: #C1D4FF; }
+        .teacher-card:nth-child(4) { background: #FFC1E3; }
+        .teacher-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .teacher-card a {
+            display: block;
+            margin-top: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .faq {
+            margin-top: 50px;
+            padding: 20px;
+            background: rgb(252, 238, 238);
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq h2 {
+            color: #ef0909;
+        }
+        .faq-item {
+            margin-bottom: 15px;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+        }
+        .teacher-card a i {
+            font-size: 20px; /* Adjust the size */
+        }
+        .teacher-card a img {
+            width: 30px; /* Adjust the width as needed */
+            height: 30px; /* Adjust the height as needed */
+            vertical-align: middle; /* Aligns it properly with text */
+        }
+
+    </style>
+    <script>
+        function toggleAnswer(element) {
+            var answer = element.nextElementSibling;
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>U&I Learn Academy</h1>
+        <nav>
+            <ul class="top-right-nav">
+                <li><a href="classes.html">Classes</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to U&I Learn Academy</h2>
+        <p style="font-size: 20px;">Join our intensive weekend classes for Grade 12 students preparing for final exams.</p>
+        <div class="hero-section">
+            <p style="font-size: 20px;">Get expert guidance and support from top teachers across South Africa.</p>
+            <a href="registration.html" class="register-button">Register Now</a>
+        </div>
+        <div class="home-sections">
+            <h3>What We Offer</h3>
+            <ul>
+                <li><strong>About Us:</strong> Learn about our mission, values, and teaching methodology.</li>
+                <li><strong>Classes Section:</strong> Explore our subjects, schedule, and expert teachers.</li>
+                <li><strong>Locations Section:</strong> Find a weekend class in your province.</li>
+                <li><strong>Testimonials Section:</strong> Hear from students and parents about their experiences.</li>
+                <li><strong>Contact Form:</strong> Easily reach out for inquiries or registration.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+<body>
+    <section id="teachers">
+        <h2>Meet Our Teachers</h2>
+        <div class="teacher-container">
+            <div class="teacher-card">
+                <img src="https://wp.technologyreview.com/wp-content/uploads/2020/02/elon-musk-ap-5.jpg" alt="Teacher 2">
+                <h3>Ms. Jane Smith</h3>
+                <p>Physical Sciences</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <div class="teacher-card">
+                <img src="https://th.bing.com/th/id/OIP.whJOrCjvvZnis4OqRDYYNwHaHa?rs=1&pid=ImgDetMain" alt="Teacher 2">
+                <h3>Disnormal Boy</h3>
+                <p>Mathematics</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <div class="teacher-card">
+                <img src="https://th.bing.com/th/id/OIP.2TBvSvNz3SWuEHvESXrS-QHaHa?pid=ImgDet&w=179&h=179&c=7&dpr=1,5" alt="Teacher 2">
+                <h3>Ndivhuwo Ndou</h3>
+                <p>Mathematics</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <div class="teacher-card">
+                <img src="https://wp.technologyreview.com/wp-content/uploads/2020/02/elon-musk-ap-5.jpg" alt="Teacher 2">
+                <h3>Mr Max</h3>
+                <p>Mathematics</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <div class="teacher-card">
+                <img src="https://wp.technologyreview.com/wp-content/uploads/2020/02/elon-musk-ap-5.jpg" alt="Teacher 1">
+                <h3>Mr Guqaza</h3>
+                <p>Mathematics</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <!-- Add more teacher cards as needed -->
+        </div>
+    </section>
+    <section id="teachers">
+        <h2>Our Speakers</h2>
+        <div class="teacher-container">
+            <div class="teacher-card">
+                <img src="https://th.bing.com/th/id/OIP.-B6BJPqTprzgyfQ8i31RyQHaJQ?rs=1&pid=ImgDetMain" alt="Teacher 2">
+                <h3>Gift Bozekana</h3>
+                <p>Speaker</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+            <div class="teacher-card">
+                <img src="https://turntable.kagiso.io/images/DIe1ZzdVoAA0873.width-800.jpg" alt="Teacher 2">
+                <h3>Scelo Mncube</h3>
+                <p>Speaker</p>
+                <a href="https://wa.me/0687668015" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What subjects do you offer?</p>
+            <p class="faq-answer">We offer Mathematics, Physical Sciences, Life Sciences, Accounting, and more.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">Where are the classes held?</p>
+            <p class="faq-answer">Our classes are held in various locations across South Africa. Please check our website for available locations.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">How do I register?</p>
+            <p class="faq-answer">You can register by clicking the 'Register Now' button on our homepage and filling out the form.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question" onclick="toggleAnswer(this)">What are the fees?</p>
+            <p class="faq-answer">Our fees vary depending on the subject and duration. Please contact us for detailed pricing.</p>
+        </div>
+    </section>
+</body>
+ <footer>
+        <p>&copy; 2025 U&I Learn Academy. All Rights Reserved.</p>
+    </footer>
+</html>

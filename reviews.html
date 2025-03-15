@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U&I Learn Academy - Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('background.jpg') no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        .review:last-child {
+            border-bottom: none;
+        }
+        .review strong {
+            color: #0055a5;
+        }
+        .review-form {
+            margin-top: 20px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #003366;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0055a5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student & Parent Reviews</h2>
+        <p>See what our students and parents say about U&I Learn Academy!</p>
+        
+        <div class="reviews">
+            <div class="review">
+                <strong>Sarah M.</strong>
+                <p>"The weekend classes helped me improve my math skills significantly! Thank you U&I Learn Academy!"</p>
+            </div>
+            <div class="review">
+                <strong>Michael T.</strong>
+                <p>"Great teachers and structured lessons. Highly recommended!"</p>
+            </div>
+            <div class="review">
+                <strong>Mrs. Johnson (Parent)</strong>
+                <p>"My daughter gained so much confidence after attending these sessions. Excellent program!"</p>
+            </div>
+            <div class="review">
+                <strong>Mr V. Sinethe (program's CEO)</strong>
+                <p>"I am thrilled to express my unwavering enthusiasm for the U&I Learn Academy program. With its innovative approach and commitment to excellence, I firmly believe that this initiative has the potential to revolutionize the learning experience. The program's forward-thinking design and dedicated team position it for unparalleled success, and I have every confidence that it will make a profound impact on its participants. I wholeheartedly endorse U&I Learn Academy and eagerly anticipate its launch."</p>
+            </div>
+
+
+        </div>
+
+        <h3>Leave a Review</h3>
+        <form class="review-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea name="review" placeholder="Write your review here..." rows="4" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+</body>
+</html>

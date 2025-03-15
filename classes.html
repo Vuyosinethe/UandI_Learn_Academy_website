@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - U&I Learn Academy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 90vw;
+            max-width: 1200px;
+        }
+        .card {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 10px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            text-decoration: none;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .card:hover {
+            transform: rotateY(90deg);
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            backface-visibility: hidden;
+        }
+        .card-title {
+            font-size: 26px;
+            font-weight: 900;
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            top: 10px;
+            text-align: center;
+            width: 100%;
+            z-index: 1;
+            backface-visibility: hidden;
+        }
+        .physics { background-image: url('https://e1.pxfuel.com/desktop-wallpaper/551/291/desktop-wallpaper-6-physics-physical-sciences.jpg'); }
+        .maths { background-image: url('https://th.bing.com/th/id/R.c31b77734465e95f80cf1e8530fb9b5e?rik=zvRdWQoIRSHkcg&riu=http%3a%2f%2fm.gettywallpapers.com%2fwp-content%2fuploads%2f2022%2f06%2fMathematics-Background-Images.jpg&ehk=Rg9xuFroetcjJ7RKjDmxnPrViLgTHpTCWWW0RYX%2fOPo%3d&risl=&pid=ImgRaw&r=0'); }
+        .accounting { background-image: url('https://th.bing.com/th/id/OIP.AULlQ3OV19HI6kztS1TkuAHaE8?rs=1&pid=ImgDetMain'); }
+        .geography { background-image: url('https://th.bing.com/th/id/OIP.-Vr4UmusJq_daMVXkWIQBgHaEK?rs=1&pid=ImgDetMain'); }
+        .economics { background-image: url('https://leverageedublog.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2020/09/24193824/International-Economics.jpg'); }
+    
+        @media (max-width: 800px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="card physics"><div class="card-title">Physical Sciences</div>Grade 10<br>Mr. Smith</a>
+        <a href="#" class="card maths"><div class="card-title">Mathematics</div>Grade 11<br>Ms. Johnson</a>
+        <a href="#" class="card accounting"><div class="card-title">Accounting</div>Grade 12<br>Mr. Brown</a>
+        <a href="#" class="card geography"><div class="card-title">Geography</div>Grade 10<br>Ms. Davis</a>
+        <a href="#" class="card economics"><div class="card-title">Economics</div>Grade 11<br>Mr. Wilson</a>
+    </div>
+</body>
+</html>
